@@ -42,10 +42,10 @@ def to_csv(pos_tags):
     df = df.transpose()
     df = pd.DataFrame(df,
                       columns = ['word', 'sent_num', 'pos'])
-    df.to_csv("janeeyre.csv", index = False)
+    df.to_csv("data/janeeyre.csv", index = False)
         
 
 if __name__ == "__main__":
-    file = open_file("janeeyre.txt")
+    file = open_file("data/janeeyre.txt")
     tags = pos(file)
     to_csv(tags)

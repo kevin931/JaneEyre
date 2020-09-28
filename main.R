@@ -5,7 +5,7 @@ library(textstem)
 source("process.R")
 source("analysis.R")
 
-text_df <- load_file("janeeyre.csv")
+text_df <- load_file("data/janeeyre.csv")
 text_df <- chapter_parse(text_df, 38)
 text_df <- stop_word(text_df)
 text_df$word_lem <- lemmatize_words(text_df$word)
